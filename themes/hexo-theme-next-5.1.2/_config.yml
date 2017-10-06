@@ -53,6 +53,7 @@ menu:
   tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
+  #board: /board
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -70,7 +71,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
-
+  #board: book
 
 # ---------------------------------------------------------------
 # Scheme Settings
