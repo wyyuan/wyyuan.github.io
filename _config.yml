@@ -4,15 +4,15 @@
 
 # Site
 title: Yuan's Blog
-subtitle: 随便写写
-description: Github https://github.com/wyyuan
+subtitle: 随便写点心得感受，读书笔记
+description: 北下关岔子专修学校土博一枚 <br/> <a href="https://github.com/wyyuan">Github</a>
 author: Wuyang Yuan
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.wyyuan.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
