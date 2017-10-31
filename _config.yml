@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.wyyuan.site
+url: https://www.wyyuan.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -80,7 +80,7 @@ deploy:
   type: git
   repo: 
     github: https://github.com/wyyuan/wyyuan.github.io.git
-    coding: git@git.coding.net:WuyangYuan/WuyangYuan.git,master
+    coding: git@git.coding.net:WuyangYuan/WuyangYuan.git
   branch: master
   
 #backup
