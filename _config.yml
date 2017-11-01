@@ -88,3 +88,6 @@ backup:
     type: git
     repository:
        github: https://github.com/wyyuan/wyyuan.github.io.git,BackupBranch
+
+#Math
+mathjax2: true
