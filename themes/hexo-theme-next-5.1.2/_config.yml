@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT,Wuyang Yuan"
+keywords: "Hexo, NexT, Wuyang Yuan"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -50,7 +50,7 @@ menu:
   #categories: /categories/
   #about: /about/
   archives: /archives/
-  tags: /tags/
+  #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
   #board: /board
@@ -80,8 +80,8 @@ menu_icons:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-scheme: Pisces
-#scheme: Gemini
+#scheme: Pisces
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
