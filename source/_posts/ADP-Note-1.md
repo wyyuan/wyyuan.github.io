@@ -17,11 +17,9 @@ mathjax: true
 
 ![Fig1](ADP-Note-1/Fig1.bmp)
 
-&emsp;&emsp;最能说明动态规划的就是最短路问题了。如图一所示，假设一个司机要从节点 $q$ 开车到节点 $r$，所有节点的集合用 $\mathcal{I}$ 表示。当他从一个节点 $i$  进入下一个节点 $j$, $j \in {\cal I}_i^ + $ 需要花费 $c_{i,j}$ 。那么，问题是他如何选择路线使得费用最小。这个问题很容易用动态规划来表达，令
+&emsp;&emsp;最能说明动态规划的就是最短路问题了。如图一所示，假设一个司机要从节点 $q$ 开车到节点 $r$，所有节点的集合用 $\mathcal{I}$ 表示。当他从一个节点 $i$  进入下一个节点 $j$, $j \in {\cal I}_i^ + $ 需要花费 $c_{i,j}$ 。那么，问题是他如何选择路线使得费用最小。这个问题很容易用动态规划来表达，令$v_i = 从 \ r \ 到\ i \in \mathcal{I}\ 的成本$。
 
-$v_i = 从 \ r \ 到\ i \in \mathcal{I}\ 的成本$。
-
-我们假设$v_r=0​$，初始时我们不知道 $v_i​$， 我们设一个非常大的数 $M​$ ，称为“大$M​$”。我们可以通过迭代式的计算
+我们假设$v_r=0$，初始时我们不知道 $v_i$， 我们设一个非常大的数 $M$ ，称为“大$M$”。我们可以通过迭代式的计算
 
 $$
 \begin{aligned}
@@ -34,9 +32,13 @@ $$
 ### 1.2 三种维度灾难
 
 &emsp;&emsp;确定性的问题可以写成
+$$
+\begin{aligned}
 
-$${V_t} \left( {S_t} \right) = \mathop {max} \limits_{{a_t}} \left( {C_t} \left( {S_t},{a_t} \right) + V_{t + 1} \left( {S_{t + 1}} \right)  \right)$$
+{V_t} \left( {S_t} \right) = \mathop{max}\limits_{a_t}  {\left( {C_t} \left( {S_t},{a_t} \right) + V{t + 1} \left( {S_{t + 1}} \right)  \right)}
 
+\end{aligned}
+$$
 &emsp;&emsp;其中 $S_{t+1}$ 是在当前状态  $S_t$ 下采取行动 $a_t$ 的结果。这个式子被称为<u>贝尔曼方程</u>，或者是汉密尔顿-雅克比方程，或者是汉密尔顿-雅克比-贝尔曼方程（HJB)。这个方程在不同领域有着不同的名字。
 
 &emsp;&emsp;在这些问题当中，有三种维度灾难
