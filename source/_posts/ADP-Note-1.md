@@ -35,7 +35,7 @@ $$
 &emsp;&emsp;确定性的问题可以写成 $(2)$ 。
 
 $$
-{V_t} \left( {S_t} \right) = \mathop{max}\limits_{a_t}  {\left( {C_t} \left( {S_t},{a_t} \right) + V{t + 1} \left( {S_{t + 1}} \right)  \right)}
+{V_t} \left( {S_t} \right) = \mathop{max}\limits_{a_t}  {\left( {C_t} \left( {S_t},{a_t} \right) + V_{t + 1} \left( {S_{t + 1}} \right)  \right)}
 \tag{2}
 $$
 
