@@ -83,7 +83,6 @@ menu_icons:
 #scheme: Pisces
 scheme: Gemini
 
-
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
@@ -95,8 +94,8 @@ social:
   #LinkLabel: Link
   GitHub: https://github.com/wyyuan
   Coding.Net: https://coding.net/u/WuyangYuan
-  Weibo: http://weibo.com/yuanwuyang
-  Wechat: '#'
+  # Weibo: http://weibo.com/yuanwuyang
+  # Wechat: '#'
 
 # Social Links Icons
 # Icon Mapping:
@@ -120,8 +119,8 @@ social_icons:
   YouTube: youtube
   Instagram: instagram
   StackOverflow: stack-overflow
-  Weibo: weibo
-  Wechat: weixin 
+  # Weibo: weibo
+  # Wechat: weixin 
 # Blog rolls
 #links_title: Links
 #links_layout: block
@@ -132,7 +131,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/avatar.gif
+# avatar: /images/avatar.gif
 
 # Table Of Contents in the Sidebar
 toc:
