@@ -11,9 +11,9 @@ mathjax: true
 
 &emsp;&emsp;也许在动态规划中最广泛运用也最少被了解的就是策略(Policy)了。一个简单的对策略的定义是
 
-(**Definition 6.0.1**) A policy is a rule (or function) that determines a decision given
-the available information in state $S_t$
-策略就是在给定了可用信息下进行决策的规则（或者是函数）。
+(**Definition 6.0.1**) A policy is a rule (or function) that determines a decision given the available information in state $S_t$.
+
+（**定义6.0.1**）策略就是在给定了可用信息下进行决策的规则（或者是函数）。
 
 &emsp;&emsp;策略这个概念最大的问题就是它指的是根据一个状态(state)得到一个行动(action)的所有方法。*所以对于不同计算需求的不同问题，它包含了很广的算法策略。* 它包含这动态规划帽子下最大范围的问题，所以在讨论的时候我们要规定使用的策略种类，以及对于一个决策最好的策略种类。
 
