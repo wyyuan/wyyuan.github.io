@@ -91,8 +91,12 @@ scheme: Gemini
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/wyyuan
+  Coding.Net: https://coding.net/u/WuyangYuan
+  Weibo: http://weibo.com/yuanwuyang
+  Wechat: '#'
 
 # Social Links Icons
 # Icon Mapping:
@@ -106,6 +110,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  Coding.Net: hand-o-right
   E-Mail: envelope
   Google: google
   Twitter: twitter
@@ -116,7 +121,7 @@ social_icons:
   Instagram: instagram
   StackOverflow: stack-overflow
   Weibo: weibo
-
+  Wechat: weixin 
 # Blog rolls
 #links_title: Links
 #links_layout: block
@@ -155,8 +160,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
+  #display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -325,8 +330,8 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname:
-  count: true
+  shortname: 
+  count: false
 
 # Hypercomments
 #hypercomments_id:
