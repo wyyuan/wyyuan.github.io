@@ -1,7 +1,2 @@
 <br/>
-<EMBED
-src="http://service.weibo.com/staticjs/weiboshow.swf?verifier=ef835547&uid=2586744222&width=220&height=400&isTitle=0&isWeibo=1&isFans=0&noborder=1&ptype=1&colors=ffffff,ffffff,444444,5093d5"
-quality="high" width="220" height="400" align="C" scale="noborder"
-flashvars="width=220&height=400&uid=2586744222&skin=skin1"
-allowScriptAccess="sameDomain"
-type="application/x-shockwave-flash"></EMBED>
+<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=2586744222&verifier=ef835547&dpc=1"></iframe>
