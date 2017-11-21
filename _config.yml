@@ -102,3 +102,8 @@ math:
     js: custom_js_source # not used
     config:
       # KaTeX config
+
+admin:
+  username: yuanuwyang
+  password_hash: $2a$10$Rm6PWzUcSC2QIgZ8vhzoPeW29jTIqSBZZpQI7BwdXr4DmJKDPZyja
+  secret: winner winner chickin dinner
