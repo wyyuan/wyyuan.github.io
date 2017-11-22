@@ -103,7 +103,10 @@ math:
     config:
       # KaTeX config
 
+# Admin
 admin:
-  username: yuanuwyang
-  password_hash: $2a$10$Rm6PWzUcSC2QIgZ8vhzoPeW29jTIqSBZZpQI7BwdXr4DmJKDPZyja
-  secret: winner winner chickin dinner
+    name: yuanwuyang
+    password: gogogo
+    secret: hey hexo
+    expire: 60*1
+    #cors: http://www.wyyuan.site/
