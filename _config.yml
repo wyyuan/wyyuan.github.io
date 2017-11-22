@@ -81,7 +81,7 @@ deploy:
   type: git
   repo: 
     #github: https://github.com/wyyuan/wyyuan.github.io.git
-    coding: git@git.coding.net:WuyangYuan/WuyangYuan.git
+    coding: git@git.coding.net:WuyangYuan/WuyangYuan.coding.me.git
   branch: master
   
 #backup
@@ -89,7 +89,7 @@ backup:
     type: git
     repository:
       # github: https://github.com/wyyuan/wyyuan.github.io.git,BackupBranch
-       coding: git@git.coding.net:WuyangYuan/WuyangYuan.git,BackupBranch
+       coding: git@git.coding.net:WuyangYuan/WuyangYuan.coding.me.git,BackupBranch
 
 math:
   engine: 'mathjax' # or 'katex'
