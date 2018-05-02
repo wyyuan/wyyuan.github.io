@@ -80,7 +80,7 @@ theme: hexo-theme-next-5.1.2
 deploy:
   type: git
   repo: 
-    #github: https://github.com/wyyuan/wyyuan.github.io.git
+    github: git@github.com:wyyuan/wyyuan.github.io.git
     coding: git@git.coding.net:WuyangYuan/WuyangYuan.coding.me.git
   branch: master
   
@@ -88,7 +88,7 @@ deploy:
 backup:
     type: git
     repository:
-      # github: https://github.com/wyyuan/wyyuan.github.io.git,BackupBranch
+       github: git@github.com:wyyuan/wyyuan.github.io.git,BackupBranch
        coding: git@git.coding.net:WuyangYuan/WuyangYuan.coding.me.git,BackupBranch
 
 math:
