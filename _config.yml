@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yuan's Blog
+title: Wuyang's Blog
 subtitle: 随便写写心得感受，读书笔记
 description: 
-author: '@面包_y' 
+author: 'Wuyang' 
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.wyyuan.site
+url: http://blog.wyyuan.site
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory

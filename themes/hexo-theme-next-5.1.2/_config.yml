@@ -93,10 +93,9 @@ scheme: Gemini
 social:
   #LinkLabel: Link
   GitHub: https://github.com/wyyuan
-  Coding.Net: https://coding.net/u/WuyangYuan
+  Coding.net: https://coding.net/u/WuyangYuan
   TIM: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3439577364&website=www.oicqzone.com
-  Project RNSM: '\RNSM'
-  # Weibo: http://weibo.com/yuanwuyang
+  Weibo: http://weibo.com/yuanwuyang
   # Wechat: '#'
 
 # Social Links Icons
@@ -111,7 +110,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Coding.Net: hand-o-right
+  Coding.Net: code
   E-Mail: envelope
   Google: google
   Twitter: twitter
@@ -122,7 +121,7 @@ social_icons:
   Instagram: instagram
   StackOverflow: stack-overflow
   TIM: qq
-  # Weibo: weibo
+  Weibo: weibo
   # Wechat: weixin 
 # Blog rolls
 #links_title: Links
@@ -134,14 +133,14 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-# avatar: /images/avatar.gif
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  number: false
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -163,8 +162,8 @@ sidebar:
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
   #display: post
-  display: always
-  #display: hide
+  #display: always
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -172,7 +171,7 @@ sidebar:
   offset_float: 12
 
   # Back to top in sidebar
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button
   scrollpercent: false
@@ -198,7 +197,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 150
+  length: 300
 
 # Post meta display settings
 post_meta:
@@ -330,19 +329,19 @@ han: false
 #duoshuo_shortname:
 
 # Disqus
-disqus:
-  enable: false
-  shortname: 
-  count: false
+#disqus:
+#  enable: false
+#  shortname: 
+#  count: false
 
 # Hypercomments
 #hypercomments_id:
 
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+#changyan:
+#  enable: false
+#  appid:
+#  appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -388,10 +387,10 @@ changyan:
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
+#duoshuo_info:
+ # ua_enable: true
+ # admin_enable: false
+ # user_id: 0
   #admin_nickname: Author
 
 
@@ -412,6 +411,16 @@ facebook_comments_plugin:
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
+
+# Gitment comments
+# Introduction: https://imsun.net/posts/gitment-introduction/
+gitment:
+  enable: true
+  githubID: wyyuan
+  repo: wyyuan.github.io
+  ClientID: 3e3b7c8977ce377ee866
+  ClientSecret: 139678b66b6990b8c94df15a65b87a010b8aedcd
+  lazy: false
 
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
