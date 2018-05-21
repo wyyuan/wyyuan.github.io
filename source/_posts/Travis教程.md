@@ -31,7 +31,7 @@ typora-root-url: ./
 
 ### 1 通过Githun账号登录Travis CI
 
-&emsp;&emsp;打开[Travis CI](https://travis-ci.com/)，选择Sign In With Github即可。
+&emsp;&emsp;打开[Travis CI](https://travis-ci.org/)，选择Sign In With Github即可。
 
 ### 2 配置Personal Token
 
