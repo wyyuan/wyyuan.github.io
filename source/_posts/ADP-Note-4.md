@@ -5,7 +5,9 @@ tags: ADP
 mathjax: true
 ---
 
-这一篇笔记中涉及了原书的第六章内容。
+&emsp;&emsp;这一篇笔记中涉及了原书的第六章内容。
+
+<!-- more -->
 
 # 第六章 策略（Policies)
 
