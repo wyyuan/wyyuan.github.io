@@ -29,20 +29,21 @@ typora-root-url: ./
 
 &emsp;&emsp;其中CI代表持续集成(Continuous Integration)，这是一种自动编译和发布代码的技术。而Travis CI在线提供了这种服务，并且可以与Github无缝衔接。接下来就简单介绍一下我是如何配置Travis CI的。
 
-
 ## 简单配置
 
-&emsp;&emsp;我的配置分为以下几步：
+### 1 通过Githun账号登录Travis CI
 
-1. 通过Githun账号登录Travis CI
-  &emsp;&emsp;打开[Travis CI](https://travis-ci.com/)，选择Sign In With Github即可。
-2. 配置Personal Token
-   * 在Github上Setting中找到[Personal access tokens设置](https://github.com/settings/tokens)。
-   * 点*Generate new token*，生成一个新的Token并记录好。（这个只会出现一次！！）
-   * 将上一步生成的Token 加入Traivis CI。在Traivis CI的右上方选More options>Setting>Environment Variables。Name为GH_TOKEN，Value则是刚才的Token，最后点"Add"。![1](Travis教程/1.jpg)
+&emsp;&emsp;打开[Travis CI](https://travis-ci.com/)，选择Sign In With Github即可。
 
+### 2 配置Personal Token
 
-3. 在项目中加入.travis.yml，我的配置如下。注意我的Hexo博客文件在BackupBranch分支中，public目录下的内容被发布到master分支。
+* 在Github上Setting中找到[Personal access tokens设置](https://github.com/settings/tokens)。
+* 点*Generate new token*，生成一个新的Token并记录好。（这个只会出现一次！！）
+* 将上一步生成的Token 加入Traivis CI。在Traivis CI的右上方选More options>Setting>Environment Variables。Name为GH_TOKEN，Value则是刚才的Token，最后点"Add"。![1](Travis教程/1.jpg)
+
+### 3 配置文件
+
+&emsp;&emsp;在项目中加入.travis.yml，我的配置如下。注意我的Hexo博客文件在BackupBranch分支中，public目录下的内容被发布到master分支。
 
 ```yaml
 # 指定语言环境
@@ -82,9 +83,6 @@ script:
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
-  # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
-  #- sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-  #- hexo deploy
   - cd ./public
   - git init
   - git config user.name "WuyangYuan"
@@ -96,7 +94,7 @@ after_script:
 # End: Build LifeCycle
 ```
 
-4. 测试
+### 4 测试
 
 * 修改仓库后提交，结果如下图所示，成功！
 
