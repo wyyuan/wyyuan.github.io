@@ -1,5 +1,5 @@
 ---
-title: Travis教程
+title: 通过Travis CI对Hexo博客进行持续集成
 date: 2018-05-21 14:16:40
 tags: hexo
 typora-root-url: ./
@@ -8,8 +8,6 @@ typora-root-url: ./
 &emsp;&emsp;本篇文章是我自己搭建了一个Travis.ci环境以自动发布hexo博客的一个实践。
 
 <!-- more -->
-
-# 通过Travis CI对Hexo博客进行持续集成
 
 ## Hexo 简介
 
