@@ -110,3 +110,10 @@ admin:
     secret: hey hexo
     expire: 60*1
     #cors: http://www.wyyuan.site/
+
+# hexo-slides-reveal
+slide:
+    dir: slides
+    separator: ^\n---\n$
+    separator_vertical: ^\n--\n$
+    charset: utf-8
