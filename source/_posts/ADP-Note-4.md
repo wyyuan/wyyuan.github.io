@@ -1,7 +1,10 @@
 ---
 title: ADP读书笔记（四）--施工中
 date: 2017-11-10 14:32:00
-tags: ADP
+tags: 
+- ADP
+categories:
+- 笔记
 mathjax: true
 ---
 

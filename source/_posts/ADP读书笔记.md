@@ -1,7 +1,10 @@
 ---
 title: ADP读书笔记 目录
 date: 2017-10-30 18:00:00
-tags: ADP
+tags: 
+- ADP
+categories:
+- 笔记
 ---
 
 书名 Approximate Dynamic Programming : Solving the Curses of Dimensionality——近似动态规划：解决维度灾难

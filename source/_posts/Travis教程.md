@@ -1,7 +1,10 @@
 ---
 title: 通过Travis CI对Hexo博客进行持续集成
 date: 2018-05-21 14:16:40
-tags: hexo
+tags: 
+- hexo
+categories:
+- Tips
 typora-root-url: ./
 ---
 
