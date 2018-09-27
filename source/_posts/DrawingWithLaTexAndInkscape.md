@@ -34,8 +34,8 @@ categories:
 >│      image.svg
 >│
 >└─pdf
->        image.pdf
->        image.pdf_tex
+>​        image.pdf
+>​        image.pdf_tex
 
 ## STEP 2： 在LaTeX文稿中引用PDF文件
 &emsp;&emsp;在这个步骤中，我们在LaTeX中引入刚才生成的`.pdf_tex`文件，在LaTeX中插入以下代码。
@@ -66,7 +66,23 @@ categories:
 
 &emsp;&emsp;当我们画好了很多图片的时候，一张一张导入操作繁琐。我写了一个命令行脚本将`.svg`文件批量转化为`.pdf`和`.pdf_tex`文件。
 
-`inkscape -D -z --file=image.svg --export-pdf=image.pdf --export-latex --export-area-drawing`
+```shell
+@echo off
+setlocal enabledelayedexpansion
+
+set DestPath=%~dp0Figures\
+set PdfPath=%~dp0pdf\
+set DestExt=*.svg
+
+for /f "delims=" %%i in ('dir /b/a-d/oN  %DestPath%\%DestExt%')  do (
+set origin_file=%DestPath%%%i
+set target_fle=%PdfPath%%%~ni.pdf
+echo Start transform from !origin_file! to !target_fle!
+inkscape -D -z --file=!origin_file! --export-pdf=!target_fle! --export-latex --export-area-drawing
+)
+pause
+```
+- 注意：需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
 
 #参考资料
 
