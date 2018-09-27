@@ -75,11 +75,12 @@ set PdfPath=%~dp0pdf\
 set DestExt=*.svg
 
 for /f "delims=" %%i in ('dir /b/a-d/oN  %DestPath%\%DestExt%')  do (
-set origin_file=%DestPath%%%i
-set target_fle=%PdfPath%%%~ni.pdf
-echo Start transform from !origin_file! to !target_fle!
-inkscape -D -z --file=!origin_file! --export-pdf=!target_fle! --export-latex --export-area-drawing
+  set origin_file=%DestPath%%%i
+  set target_fle=%PdfPath%%%~ni.pdf
+  echo Start transform from !origin_file! to !target_fle!
+  inkscape -D -z --file=!origin_file! --export-pdf=!target_fle! --export-latex --export-area-drawing
 )
+
 pause
 ```
 - 注意：需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
