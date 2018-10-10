@@ -32,10 +32,9 @@ categories:
 >│
 >├─Figures
 >│      image.svg
->│
->└─pdf
->​        image.pdf
->​        image.pdf_tex
+>│      image.pdf
+>│      image.pdf_tex
+>└─
 
 ## STEP 2： 在LaTeX文稿中引用PDF文件
 &emsp;&emsp;在这个步骤中，我们在LaTeX中引入刚才生成的`.pdf_tex`文件，在LaTeX中插入以下代码。
@@ -44,7 +43,7 @@ categories:
 \begin{figure}[!htbp] 
     \centering
     \def\svgwidth{\columnwidth}
-    \input{pdf/image.pdf_tex}
+    \input{Figures/image.pdf_tex}
 \end{figure}
 ```
 
@@ -52,11 +51,11 @@ categories:
 
 * 在LaTeX的头中需要引入`graphics`包。
 
-* LaTeX默认的图片位置是根目录，如果需要将导出的文件放到子目录中（如本例中的pdf目录)，需要使用`graphicspath`命令。
+* LaTeX默认的图片位置是根目录，如果需要将导出的文件放到子目录中（如本例中的`Figures`目录)，需要使用`graphicspath`命令。
 
 ```latex
 \usepackage{graphics}
-\graphicspath{{pdf/}}
+\graphicspath{{Figures/}}
 ```
 结果如下图所示：
 
@@ -70,8 +69,8 @@ categories:
 @echo off
 setlocal enabledelayedexpansion
 
-set DestPath=%~dp0Figures\
-set PdfPath=%~dp0pdf\
+set DestPath=%~dp0\
+set PdfPath=%~dp0\
 set DestExt=*.svg
 
 for /f "delims=" %%i in ('dir /b/a-d/oN  %DestPath%\%DestExt%')  do (
@@ -83,11 +82,33 @@ for /f "delims=" %%i in ('dir /b/a-d/oN  %DestPath%\%DestExt%')  do (
 
 pause
 ```
-- 注意：需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
+
+&emsp;&emsp;也可以通过脚本把pdf转化成svg，代码如下。
+
+```shell
+@echo off
+setlocal enabledelayedexpansion
+
+set SVGPath=%~dp0\
+set PdfPath=%~dp0\
+set DestExt=*.pdf
+
+for /f "delims=" %%i in ('dir /b/a-d/oN  %PdfPath%\%DestExt%')  do (
+set origin_file=%PdfPath%%%i
+set target_fle=%SVGPath%%%~ni.svg
+echo Start transform from !origin_file! to !target_fle!
+inkscape -D -z --file=!origin_file! --export-plain-svg=!target_fle!
+)
+
+pause
+```
+注意：
+- 需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
+- 以上脚本需要在figures文件夹下运行。
 
 #参考资料 
 
-​       更多细节请参考这篇文章 [How to include an SVG image in LaTeX](http://mirror.las.iastate.edu/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf)
+       更多细节请参考这篇文章 [How to include an SVG image in LaTeX](http://mirror.las.iastate.edu/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf)
 
 
 
