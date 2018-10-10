@@ -70,8 +70,8 @@ categories:
 @echo off
 setlocal enabledelayedexpansion
 
-set DestPath=%~dp0Figures\
-set PdfPath=%~dp0pdf\
+set DestPath=%~dp0\
+set PdfPath=%~dp0\
 set DestExt=*.svg
 
 for /f "delims=" %%i in ('dir /b/a-d/oN  %DestPath%\%DestExt%')  do (
@@ -85,9 +85,30 @@ pause
 ```
 - 注意：需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
 
+  也可以通过脚本把pdf转化成svg，代码如下。
+
+  ```shell
+  @echo off
+  setlocal enabledelayedexpansion
+  
+  set SVGPath=%~dp0\
+  set PdfPath=%~dp0\
+  set DestExt=*.pdf
+  
+  for /f "delims=" %%i in ('dir /b/a-d/oN  %PdfPath%\%DestExt%')  do (
+  set origin_file=%PdfPath%%%i
+  set target_fle=%SVGPath%%%~ni.svg
+  echo Start transform from !origin_file! to !target_fle!
+  inkscape -D -z --file=!origin_file! --export-plain-svg=!target_fle!
+  )
+  
+  pause
+  ```
+
+
 #参考资料 
 
-​       更多细节请参考这篇文章 [How to include an SVG image in LaTeX](http://mirror.las.iastate.edu/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf)
+       更多细节请参考这篇文章 [How to include an SVG image in LaTeX](http://mirror.las.iastate.edu/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf)
 
 
 
