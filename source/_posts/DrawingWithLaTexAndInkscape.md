@@ -106,6 +106,8 @@ pause
 - 需要首先把Inkscape的路径加入到系统变量 PATH 下，然后在根目录下运行该脚本。
 - 以上脚本需要在figures文件夹下运行。
 
+
+
 #参考资料 
 
        更多细节请参考这篇文章 [How to include an SVG image in LaTeX](http://mirror.las.iastate.edu/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf)
