@@ -35,7 +35,10 @@ MS Visio
 Origin
 InkSpace
 
-### 数学公式 Mathtype
+### 数学公式
+
+Mathtype
+Mathpix Snipping
 
 ### 转换工具 Pandoc
 
@@ -52,3 +55,6 @@ InkSpace
   ### WordPress
 
   ### Hexo
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2OTk1ODM5NDZdfQ==
+-->
