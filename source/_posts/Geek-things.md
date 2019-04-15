@@ -19,42 +19,38 @@ categories:
 在科研和coding以及生活中，我们会用到一些软件，包括：
 
 ## 办公软件（文字，图表处理，演讲屏幕）
-  ### MS OFFICE （Word/Excel/PowerPoint等）
+### MS OFFICE （Word/Excel/PowerPoint等）
+### LaTeX
+- Texlive 2016
+- TexStudio
 
-  ### LaTeX
-
-	我使用的LaTeX是Texlive 2016，目前的编写工具是TexStudio
-
-  ### Markdown
-
-	我目前使用的Markdown编辑工具是Typora
+### Markdown
+- Typora
 
 ### 图表编辑
 
-MS Visio
-Origin
-InkSpace
+- MS Visio
+- Origin
+- InkSpace
 
 ### 数学公式
 
-Mathtype
-Mathpix Snipping
+- Mathtype
+- Mathpix Snipping
 
 ### 转换工具 Pandoc
 
 ## 开发工具
-  ### Visual Studio
-  ### Visual Studio Code
-
-### Git
+- Visual Studio
+- Visual Studio Code
+- Git
 
 ## 数据库
-  ### Oracle
-  ### MongoDB
+- Oracle
+- MongoDB
 ## 个人博客
-  ### WordPress
-
-  ### Hexo
+- WordPress
+- Hexo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTk1ODM5NDZdfQ==
+eyJoaXN0b3J5IjpbMjE0Njk4MjEyMCwtMTY5OTU4Mzk0Nl19
 -->
