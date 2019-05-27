@@ -14,8 +14,6 @@ mathjax: true
 
 # VRP问题的思考
 
-[TOC]
-
 ## Introduction
 考虑一个最短路问题，它具有如下形式
 $$
@@ -52,6 +50,7 @@ $$
 $$
 L^{*}=\max _{\mu} L(\mu)
 $$
+
 **弱对偶性**(Weak Duality) The optimal objective function value $L^*$ of the Lagrangian multiplier problem is always a lower bound on the optimal objectivef unction value of the problem (P) .(i.e., $L^* \le z^*$). 
 
 上述几个量之间的关系：
@@ -117,5 +116,5 @@ $$
 ## LAGRANGIAN RELAXATION AND LINEAR PROGRAMMING 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzODM1NDUzNCwtOTgxNjUzMTkyXX0=
+eyJoaXN0b3J5IjpbMTAzNDI5MDcwNCwtOTgxNjUzMTkyXX0=
 -->
