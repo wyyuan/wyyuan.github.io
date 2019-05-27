@@ -81,11 +81,11 @@ L(\mu)=\min \left\{c_{P}+\mu\left(t_{P}-T\right) : P \in \mathscr{P}\right\}
 $$
 这里做了一些简化，因为我们不需要把路径守恒约束放到拉格朗日函数中，这样，原问题解的形式可以用路径来表达，这里一条路径$p$表示一系列$x$的取值。通过枚举所有路径 $p$ 可以得到所有 $c_{P}+\mu\left(t_{P}-T\right)$ 的取值。
 
-![1558340610162](/1558340610162.png)
+![1558340610162](Network-FLow-16/1558340610162.png)
 
 这样可以作出$L(\mu)$的图像：
 
-![1558341703881](/1558341703881.png)
+![1558341703881](Network-FLow-16/1558341703881.png)
 
 ## 次梯度法 Bubgradient Optimization Technique 
 
@@ -103,7 +103,7 @@ $$
 
 * $x^k$是第$k$次迭代中任意一个解。
 
-在使用这个方法的时候，步长$\theta_{k}$的选择较为重要。如果步长太小，算法会卡在一个地方不无法收敛；如果太大，则会漏掉最优解并且可能在两个或多个非优解之间来回。所以通过设置$\theta_{k} \rightarrow 0 \quad \text { and } \quad \sum_{j=1}^{k} \theta_{j} \rightarrow \infty$ 使得算法在这两种极端情况中取一个平衡点。
+在使用这个方法的时候，步长$\theta_{k}$的选择较为重要。如果步长太小，算法会卡在一个地方不无法收敛；如果太大，则会漏掉最优解并且可能在两个或多个非优解之间来回。所以通过设置$\theta_{k} \rightarrow 0 $ and $ \sum_{j=1}^{k} \theta_{j} \rightarrow \infty$ 使得算法在这两种极端情况中取一个平衡点。
 
 ### 牛顿法(Newton's method)
 
@@ -116,5 +116,5 @@ $$
 ## LAGRANGIAN RELAXATION AND LINEAR PROGRAMMING 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDI5MDcwNCwtOTgxNjUzMTkyXX0=
+eyJoaXN0b3J5IjpbLTI5NjgxMzg4NywtOTgxNjUzMTkyXX0=
 -->
