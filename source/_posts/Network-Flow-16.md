@@ -83,11 +83,11 @@ L(\mu)=\min \left\{c_{P}+\mu\left(t_{P}-T\right) : P \in \mathscr{P}\right\}
 $$
 这里做了一些简化，因为我们不需要把路径守恒约束放到拉格朗日函数中，这样，原问题解的形式可以用路径来表达，这里一条路径$p$表示一系列$x$的取值。通过枚举所有路径 $p$ 可以得到所有 $c_{P}+\mu\left(t_{P}-T\right)$ 的取值。
 
-![1558340610162](/1558340610162.png)
+![1558340610162](Network-Flow-16/1558340610162.png)
 
 这样可以作出$L(\mu)$的图像：
 
-![1558341703881](/1558341703881.png)
+![1558341703881](Network-Flow-16/1558341703881.png)
 
 ## 3.次梯度法 Bubgradient Optimization Technique 
 
@@ -129,7 +129,3 @@ $$
    {{\text{ subject to }}\sum\limits_{i = 0}^{k - 1} {{\xi ^i}}  = 1,\quad \sum\limits_{i = 0}^{k - 1} {{\xi ^i}} {g^i} = 0}  \\ 
    {{\xi ^i} \geqslant 0,\quad i = 0, \ldots ,k - 1}  \\
 $$
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjExMjkwODksLTExMDc5ODI3NTYsLT
-k4MTY1MzE5Ml19
--->
