@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="心得,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;本文是我在2017年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。">
+<meta name="keywords" content="心得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科研漫谈——如何进行知识整理">
+<meta property="og:url" content="http://blog.wyyuan.site/post/Workshop-2017-2018-1/index.html">
+<meta property="og:site_name" content="Wuyang&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;本文是我在2017年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.wyyuan.site/post/Workshop-2017-2018-1/1.png">
+<meta property="og:image" content="http://blog.wyyuan.site/post/Workshop-2017-2018-1/2.1.png">
+<meta property="og:updated_time" content="2019-05-27T02:08:49.720Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="科研漫谈——如何进行知识整理">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;本文是我在2017年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。">
+<meta name="twitter:image" content="http://blog.wyyuan.site/post/Workshop-2017-2018-1/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: false,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.wyyuan.site/post/Workshop-2017-2018-1/">
+
+
+
+
+
+  <title>科研漫谈——如何进行知识整理 | Wuyang's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wuyang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写心得感受，读书笔记</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.wyyuan.site/post/Workshop-2017-2018-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wuyang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuyang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">科研漫谈——如何进行知识整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T15:21:11+00:00">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科研漫谈/" itemprop="url" rel="index">
+                    <span itemprop="name">科研漫谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;本文是我在2017年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。</p>
+<a id="more"></a>
+<h1 id="写此文的动机"><a href="#写此文的动机" class="headerlink" title="写此文的动机"></a>写此文的动机</h1><p>&emsp;&emsp;曾几何时，我也是一只刚进入科研的小萌新。刚入门的时候有着一腔热情，但是每每阅读文献，尤其是高水平的文献的时候，总免不了产生一种知难而退之感。究其原因，主要来自于两方面：</p>
+<ol>
+<li><p>英语水平不过关，专业词汇需要反复查。</p>
+</li>
+<li><p>基础知识点不足，常常出现大坑需要填。</p>
+</li>
+</ol>
+<p>&emsp;&emsp;这两方面因素使得阅读文献花费了巨大的时间成本。如果要重复文献中的方法或是案例，那么花费的时间会更多（因为几乎每一句话都要反复地读）。</p>
+<p>&emsp;&emsp;第一点好弥补，很多词见得次数多了自然就熟了。第二点就难了，即使是同样的一种技术/一个模型/一种方法，不同的文章中运用的方式也会大相径庭，而且，作为以应用为导向的会议或者期刊论文来说，没有必要把方法论完整的叙述一遍。也就是说，这一点并不是多读论文就能弥补的。</p>
+<p>&emsp;&emsp;那么，如何有效的解决这个问题呢？几年后的今天回过头来看这个问题，发现自己走了非常多的弯路，但也有幸走出了这种困境。虽然无法一时间将所有的知识倾囊相授，但是我想通过此文提出一个理解我们所研究问题的一个基本的框架。我希望通过运用这套方法能够对读者有所帮助。</p>
+<ol>
+<li><p>当你开始阅读一篇本专业的新论文，你可以迅速地给它在研究领域内的位置；</p>
+</li>
+<li><p>通过知识整理，你可以知道你要从哪些地方开始你的研究工作。</p>
+</li>
+</ol>
+<h1 id="理解交通规划与管理问题"><a href="#理解交通规划与管理问题" class="headerlink" title="理解交通规划与管理问题"></a>理解交通规划与管理问题</h1><h2 id="出发点"><a href="#出发点" class="headerlink" title="出发点"></a>出发点</h2><p>&emsp;&emsp;我的专业是交通运输规划与管理，这是一个涉及面非常广的学科，其研究的内容从研究对象上来说，包括城市道路道路交通，城市轨道交通，铁路运输，航空运输等；从时间范围上来说，涵盖从规划问题（如动车段所选址）到运营控制（如列车调度）。在研究当中往往会读到非常多的论文，其研究的问题，问题的表达和解决问题的方法多种多样。如何快速的理解论文描述的问题呢？我以供求关系为理解问题的出发点。</p>
+<p><img src="/post/Workshop-2017-2018-1/1.png" alt="图1"></p>
+<p>&emsp;&emsp;“供”是指供给，在铁路运输中，列车上的每一个席位就是供给的一种形式；“需”是指客运需求，这是一个抽象的概念。产生需求的主体是人，比如“我想明天从北京去上海”表达了我的一种需求。交通规划与管理的问题背景都可以看做是供需关系在不同维度上的体现。</p>
+<h3 id="供给——管理优化"><a href="#供给——管理优化" class="headerlink" title="供给——管理优化"></a>供给——管理优化</h3><p>&emsp;&emsp;在研究的问题中，供给往往会受到非常多的约束。最基本的约束来自于时空的约束，比如，一条铁路线上不能无限制的开车，因为要保证安全；动车组不能无休止的运行，因为要维修；在内陆火车上吃不到海鲜，因为运过来时间不够（过保质期）；列车不能无限制的卖票，因为车上席位有限。</p>
+<p>&emsp;&emsp;解决上述的问题，除了引入新的资源以外（更高时速的列车，调整修程修制，换用席位更多的车型）外，更多的情况是有效的对现有资源进行有效组织。在这里我把这些手段统一称作“优化管理”。通常，解决这一类问题的手段是通过更好的计划或者是控制。我先简单区分一下这两者的区别。</p>
+<p>&emsp;&emsp;计划：在何时何地进行何种操作。如，“11时30分XXX次列车从北京南站发车”，“10时-11时发出这种方案线的列车频率为5”。</p>
+<p>&emsp;&emsp;控制：根据当前的状况调整/制定计划。如，“当XXX次列车晚点，运行图进行……调整”。</p>
+<p>&emsp;&emsp;根据优化目标的不同，模型的构建会基于Scheduling或Optimal Control两类理论框架。当然，不同论文里面因为描述的问题不同，所构建的具体模型不同，但基本都符合这两类框架。 </p>
+<h3 id="需求——现象描述"><a href="#需求——现象描述" class="headerlink" title="需求——现象描述"></a>需求——现象描述</h3><p>&emsp;&emsp;在供给对面的是形态各异的需求。需求中可以包含的信息是非常多的。我们不可能在解决所有的问题中都把所有关于需求的信息都用上，因为这是不必要且难于操作的。因而针对不同的问题（管理优化的目标）我们选取哪些信息，以及如何准确地把需求描述出来是最关键问题。</p>
+<p>&emsp;&emsp;对需求的描述从最宏观到最微观的一个例子。</p>
+<blockquote>
+<pre><code>信息1：“有100人明天想从北京去上海。”
+
+信息2：“50个人更倾向于火车出行，50人想要坐飞机。”
+
+信息3：“倾向于火车出行的旅客倾向于坐上午10:00的火车。”
+
+信息4：“如果火车票涨价500元，有20个人改乘坐飞机。”
+
+……
+
+信息N：“小明明天上午10点在上海有个会议；小王希望最近几天去上海旅游一趟；小李则是……”
+</code></pre></blockquote>
+<p>&emsp;&emsp;如果我们要决定明天从北京去上海开几趟车，比如一趟车只能装25人。如果仅有信息1，我们做出的决策可能会是开4趟；再得到信息2，那么可能决策可能是开2趟；信息3、4可能会对这个决策有影响，但是从经验上来看，似乎相对于信息1和2就没有那么重要了；如果要制定出最优的决策，那么需要所有N条信息。当然，对于一个决策开几趟列车的人来说，收集这么多信息成本太高了，而且建模难度也太高了。</p>
+<p>&emsp;&emsp;如何以建模语言把需求的有效特征描述出来，更是一个难题。这当中的难点在于，需求并不总是“100人”，“10:00”，”500元“这样简单，旅客选择行为就是一个难于描述的需求维度。至少有两种模型都在描述这一现象。</p>
+<p>&emsp;&emsp;离散选择模型，以Logit模型为代表；</p>
+<p>&emsp;&emsp;用户均衡模型，以Backmann模型为代表。</p>
+<p>&emsp;&emsp;这两种理论或是结合或是独立应用，都取得了广泛认可。这至少给了我一个启示：对于需求的建模似乎并没有正确，只要它能反映需求的主要特征且解释能力足够好，都是有应用潜力的。</p>
+<p>&emsp;&emsp;如果追求与观测结果更加接近的模型，那么放弃了一些解释力模型也是有市场的，比如回归模型，人工神经网络等。但是放弃解释力是有代价的，那就是在宏观问题中的应用潜力收到影响。</p>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p>&emsp;&emsp;那么当我拿到一篇新的论文时，我应该如何快速获取其中有效信息呢。首先当然是快速先读一遍，尝试回答下面问题：</p>
+<ul>
+<li>问题的背景和要素？（区分供给和需求）</li>
+<li>问题属于哪一类模型？</li>
+</ul>
+<p>&emsp;&emsp;第一个问题只要认真阅读我相信是很好回答的；而第二个问题实际上就在考验读者的积累了。如果你对论文的建模还比较模糊了话，不妨参考一下下表。</p>
+<p><img src="/post/Workshop-2017-2018-1/2.1.png" alt="2"></p>
+<ul>
+<li>虽然数据分析不在我理解问题的框架当中，但是通过数据得到需求建模的信息（比如市场的划分等）是这个时代非常基础且重要的一种能力。</li>
+</ul>
+<ul>
+<li>根据供需问题的划分，我对一些基础理论进行了分类。图中标签有中文有英文，取决于我第一次看到这个概念的时候它的语言。这些理论的背景都是来自于应用数学</li>
+</ul>
+<p>&emsp;&emsp;这张表是我对目前我自己的知识框架的整理。如果我读到一篇关于开行方案的文章，它运用双层规划模型，上层问题是开行方案的编制，下层问题是服务网络配流，还涉及到了车底周转，那么这篇文章很快就能找到一个位置。同样，如果你有某些地方不太懂也可以找到遗漏的知识点。</p>
+<p>&emsp;&emsp;那怎样才能整理出你自己的这一张表呢？</p>
+<h1 id="阅读文献"><a href="#阅读文献" class="headerlink" title="阅读文献"></a>阅读文献</h1><h2 id="检索文献"><a href="#检索文献" class="headerlink" title="检索文献"></a>检索文献</h2><p>&emsp;&emsp;文献检索其实非常的重要，因为大家时间有限，不可能精读一个领域的所有文章。所以如何从一篇文章中提取尽可能多的信息（读透）是非常重要的。我没有比较好的方法，但是还是有一个我认为不错的方法：</p>
+<ol>
+<li><p>如果你对研究领域一点认识都没有的话，建议去找找影响力高的期刊或者图书；</p>
+</li>
+<li><p>从这些期刊中选择引用频率比较高的论文；</p>
+</li>
+<li><p>阅读这篇论文/这本书（的某个章节），完善你的框架：</p>
+<p>了解论文的作者（们），如果不知道可以去ResearchGate和大学网站去找，</p>
+<p>了解论文的引用文献，找到被引用次数高的期刊或者图书；</p>
+</li>
+<li><p>重复第3步。</p>
+</li>
+</ol>
+<h2 id="总结文献"><a href="#总结文献" class="headerlink" title="总结文献"></a>总结文献</h2><ul>
+<li>文件检索不等于找一篇看一篇，如果你看完一篇文章能够拓展你的认知，那么是很好的；如果一篇文章完全在你的认知以内，那可以快速的浏览。</li>
+</ul>
+<ul>
+<li>高引的论文往往会向抽象的层次（基础理论侧）更进一步（提炼了问题）或者是提出了一个很好的求解方法，这种文章请标记为关键文章，有精读的必要。</li>
+</ul>
+<ul>
+<li>请有效运用文献整理工具，如NoteExpress, EndNote等。</li>
+</ul>
+<h1 id="练习技能"><a href="#练习技能" class="headerlink" title="练习技能"></a>练习技能</h1><p>&emsp;&emsp;当你开始有了几篇精读的文献之后，你就可以着手开始自己的研究了。不过，如果你需要有所创新的话，一些基本的技能还是要有所掌握的。</p>
+<h2 id="数学基础"><a href="#数学基础" class="headerlink" title="数学基础"></a>数学基础</h2><p>&emsp;&emsp;数学，尤其是应用数学的分支，是框架中基础理论的基础。在研究中，你既需要数学语言来描述你的问题，又需要一些解析/数值方法来求解你的问题。一些基础技能罗列如下，包括一些关键点。</p>
+<ul>
+<li><p>运筹学</p>
+<ul>
+<li><p>线性规划理论</p>
+<p>大规模问题： D-W分解，列生成方法原理</p>
+</li>
+<li><p>非线性规划理论</p>
+<p>拉格朗日乘子，对偶理论，KKT条件</p>
+</li>
+<li><p>凸规划理论</p>
+<p>F-W算法，交替方向乘子法(ADMM)</p>
+</li>
+<li><p>整数规划理论</p>
+<p>B&amp;B分支定界法</p>
+</li>
+<li><p>动态规划理论</p>
+<p>Approximate Dynamic Programming (近似动态规划)</p>
+</li>
+</ul>
+</li>
+<li><p>数理统计学</p>
+<ul>
+<li><p>参数估计</p>
+<p>极大似然法 E-M法 机器学习的方法</p>
+</li>
+<li><p>时间序列分析</p>
+<p>ARIMA (自回归积分滑动平均模型) ，DLM（动态线性模型）等</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机应用"><a href="#计算机应用" class="headerlink" title="计算机应用"></a>计算机应用</h2><p>&emsp;&emsp;我们的研究脱离不了计算机，在工作过程中，我主要用它来做三件事情：</p>
+<ul>
+<li><p>管理信息系统</p>
+<p>系统分析，建模，设计</p>
+</li>
+</ul>
+<ul>
+<li><p>求解最优化问题</p>
+<p>调用求解器 Cplex Gurobi</p>
+</li>
+<li><p>进行数据分析</p>
+<ul>
+<li><p>文件系统：SPSS 或者 R Python中的机器学习库</p>
+</li>
+<li><p>数据库：Oracle SQL</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>&emsp;&emsp;给萌新的学习哪些语言（技术）的推荐（层次由浅入深）：</p>
+<ul>
+<li>如果你只是需要求解 matlab+yalmip</li>
+<li>如果你需要参与信息系统开发 C#</li>
+<li>如果你需要进行数据分析 python / 简单统计 SQL</li>
+<li>如果你需要发明“轮子” C++</li>
+</ul>
+<p>团队协作</p>
+<ul>
+<li>git</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/心得/" rel="tag"># 心得</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/开坑说明/" rel="prev" title="书单 & 开坑列表">
+                书单 & 开坑列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+     
+       <div id="gitment-container"></div>
+     
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+		  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Wuyang">
+          <p class="site-author-name" itemprop="name">Wuyang</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wyyuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/WuyangYuan" target="_blank" title="Coding.net">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Coding.net
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.researchgate.net/profile/Wuyang_Yuan" target="_blank" title="Researchgate">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Researchgate
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3439577364&website=www.oicqzone.com" target="_blank" title="TIM">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                    
+                      TIM
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写此文的动机"><span class="nav-text">写此文的动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理解交通规划与管理问题"><span class="nav-text">理解交通规划与管理问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#出发点"><span class="nav-text">出发点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#供给——管理优化"><span class="nav-text">供给——管理优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求——现象描述"><span class="nav-text">需求——现象描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架"><span class="nav-text">框架</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读文献"><span class="nav-text">阅读文献</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#检索文献"><span class="nav-text">检索文献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结文献"><span class="nav-text">总结文献</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习技能"><span class="nav-text">练习技能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数学基础"><span class="nav-text">数学基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机应用"><span class="nav-text">计算机应用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wuyang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+     
+     
+     
+     
+     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+     
+         <script type="text/javascript">
+             const gitment = new Gitment({
+                id: window.location.pathname,
+                owner: 'wyyuan',
+                repo: 'wyyuan.github.io',
+                oauth: {
+                    client_id: '3e3b7c8977ce377ee866',
+                    client_secret: '139678b66b6990b8c94df15a65b87a010b8aedcd',
+                }});
+             gitment.render('gitment-container');
+         </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+     
+ 
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

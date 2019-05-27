@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="团队workshop,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;本文是我在2018年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。Slide">
+<meta name="keywords" content="团队workshop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程漫谈——高速铁路客运服务计划编制问题的领域设计">
+<meta property="og:url" content="http://blog.wyyuan.site/post/Workshop-2018-2019-1/index.html">
+<meta property="og:site_name" content="Wuyang&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;本文是我在2018年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。Slide">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.wyyuan.site/post/Workshop-2018-2019-1/1.png">
+<meta property="og:updated_time" content="2019-05-27T02:08:49.728Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编程漫谈——高速铁路客运服务计划编制问题的领域设计">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;本文是我在2018年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。Slide">
+<meta name="twitter:image" content="http://blog.wyyuan.site/post/Workshop-2018-2019-1/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: false,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.wyyuan.site/post/Workshop-2018-2019-1/">
+
+
+
+
+
+  <title>编程漫谈——高速铁路客运服务计划编制问题的领域设计 | Wuyang's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wuyang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写心得感受，读书笔记</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.wyyuan.site/post/Workshop-2018-2019-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wuyang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuyang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">编程漫谈——高速铁路客运服务计划编制问题的领域设计</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-23T16:48:11+00:00">
+                2018-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程漫谈/" itemprop="url" rel="index">
+                    <span itemprop="name">编程漫谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;本文是我在2018年9月团队Workshop上所讲内容的底稿。为方便各位同学学习交流，发布于此。<a href="./slides/workshop2018-2019_1.html">Slide</a><br><a id="more"></a></p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>&emsp;&emsp;在上一次的漫谈中，我结合团队的研究方向，对我们要开发的计算机软件进行了需求分析。目前来看，我们想要通过编程解决两个问题：</p>
+<ul>
+<li>信息管理 —— 我们需要维护，管理，可视化基础数据</li>
+<li>算法实现 —— 我们需要将科研当中的算法运用到实际的案例上</li>
+</ul>
+<p>&emsp;&emsp;实现上述两个功能在程序的设计上带来了巨大的挑战。因为我们希望开发出的软件具有良好的<strong>可维护性</strong>和<strong>代码可读性</strong>。具体说来，就是将算法实现和信息管理功能彻底解耦。</p>
+<p>&emsp;&emsp;举例来说，在公交系统中，一个网络弧段通常用一系列字段描述： <code>前序弧段</code>，<code>后续弧段</code>…<code>设计速度</code>，<code>道路宽度</code>，<code>道路长度</code>。在铁路网络中，网络弧段的描述则是：<code>前序弧段</code>，<code>后续弧段</code>，<code>运营速度</code>，<code>长度</code>，<code>坡度</code>，<code>信号制式</code>。如果我们要在这个两种网络当中实现最短路算法，我们希望这个算法只写一遍（尽量减少冗余代码）。事实上，我们研究的问题不止一个，而提出的算法更多，我们希望能把这些工作整理在一个程序中，同时，考虑到以后的研究，我们希望这个程序能够减少未来的工作量。这个问题属于软件工程的研究范畴。为了解决我们的问题，下面我要引入一些软件工程上的方法论。</p>
+<h2 id="Domain-Driven-Design-DDD-领域模型驱动设计"><a href="#Domain-Driven-Design-DDD-领域模型驱动设计" class="headerlink" title="Domain-Driven Design (DDD) 领域模型驱动设计"></a>Domain-Driven Design (DDD) 领域模型驱动设计</h2><p>&emsp;&emsp;为了解决复杂软件设计的问题，Eric Evans 在<a href="http://book.douban.com/subject/1629512/" target="_blank" rel="noopener">《领域驱动设计——软件核心复杂性应对之道</a>》中详细介绍了DDD设计思想。从我的个人理解出发，DDD模式以业务逻辑（领域）为核心进行软件设计，注重对业务的划分，聚合，而对资源的操作用Repository封装。这样做的好处是显而易见的——我们可以把注意力集中在业务逻辑上。</p>
+<p>&emsp;&emsp;DDD模式将软件系统分为四层：基础结构层、领域层、应用层和表现层，层与层之间的依赖关系如下图所示。在领域层中，我们只需要完成对业务设计就好，至于其中所用到的数据的读写则是基础设施层需要实现的。介绍DDD的设计思想不是本文的重点，下面我们着重介绍如何对目前我的研究问题进行建模。<br><img src="/post/Workshop-2018-2019-1/1.png" alt="1"></p>
+<h2 id="高速铁路客运服务网模型"><a href="#高速铁路客运服务网模型" class="headerlink" title="高速铁路客运服务网模型"></a>高速铁路客运服务网模型</h2><p>&emsp;&emsp;在对铁路客运服务网的研究当中，主要要素包含：物理网络，开行方案， 运行图（宏观）以及活动设备计划（e.g. 交路计划）。而我们团队主要研究的问题包括：</p>
+<ul>
+<li><strong>开行方案编制问题</strong></li>
+<li><strong>宏观运行图编制问题</strong></li>
+<li><strong>动车组交路编制及检修问题</strong></li>
+<li><strong>客流预测问题</strong></li>
+</ul>
+<p>&emsp;&emsp;在过去十多年的研究当中，在以上这些问题的研究中，我们提出了很多模型及算法。再次强调的是，我们的目标是将这些模型与算法在统一的平台实现。注意：大家的模型和算法基于的具体实例可以是不同的（例如前面所论述的公交与铁路的例子），但是大家的问题输入与输出基本相同。为了解开数据管理与问题求解之间的耦合，首先需要划分模块并设计接口。这样做的好处是编制算法的时候我们并不需要网络的很多细节，而修改路网的某些字段也不会对算法运行造成影响。</p>
+<h3 id="基础路网"><a href="#基础路网" class="headerlink" title="基础路网"></a>基础路网</h3><p>&emsp;&emsp;基础路网的元素包含：路网，线路，车站和区间。这里为了结合运输计划的建模，我把物理路径也放到了这一层。</p>
+<ul>
+<li><p>路网</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface IRailwayNetwork</span><br><span class="line">&#123;</span><br><span class="line">    IEnumerable&lt;IRailwaySection&gt; SectionCollection &#123; get; &#125; //区间集合</span><br><span class="line">    IEnumerable&lt;IRailwayStation&gt; StationCollection &#123; get; &#125; //车站集合</span><br><span class="line">    IEnumerable&lt;IRailwayLine&gt; LineCollection &#123; get; &#125; //线路集合</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>车站</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface IRailwayStation</span><br><span class="line">&#123;</span><br><span class="line">    int RailwayStationID &#123; get; &#125;</span><br><span class="line">    string StaName &#123; get; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>区间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public interface IRailwaySection</span><br><span class="line">&#123;</span><br><span class="line">    int RailwaySectionID &#123; get; &#125;</span><br><span class="line">    string RailwaySectionName &#123; get; &#125;</span><br><span class="line">    IRailwayStation StartSta &#123; get; &#125;</span><br><span class="line">    IRailwayStation EndSta &#123; get; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>线路</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface IRailwayLine</span><br><span class="line">&#123;</span><br><span class="line">    int RailwayLineID &#123; get; set; &#125;</span><br><span class="line">    IEnumerable&lt;IRailwaySection&gt; RailwaySections &#123; get; &#125;</span><br><span class="line">    IEnumerable&lt;IRailwayStation&gt; RailwayStations &#123; get; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>物理网路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface IRailwayNetRoute</span><br><span class="line">&#123;</span><br><span class="line">    IEnumerable&lt;IRailwaySection&gt; AlongSectionList &#123; get; &#125; // 区间列表</span><br><span class="line">    IEnumerable&lt;IRailwayStation&gt; AlongStaList &#123; get; &#125; // 途径车站列表</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="运输计划模型"><a href="#运输计划模型" class="headerlink" title="运输计划模型"></a>运输计划模型</h3><p>&emsp;&emsp;这里以开行方案为例展示如何对运输计划进行设计。注意，运输计划需要基于路网对象实例的。也就是说，当我们提到”北京西站”的时候，是指特定的一个车站对象。</p>
+<ul>
+<li><p>方案线</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface ILine</span><br><span class="line">&#123;</span><br><span class="line">    string Name &#123; get; &#125; // 方案线名称</span><br><span class="line">    IRailwayNetRoute Route &#123; get; &#125; // 物理路径</span><br><span class="line">    IEnumerable&lt;IRailwayStation&gt; StopStations &#123; get; &#125; // 停站车站集合</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开行方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface ILineLlan: IEnumerable&lt;ILine&gt;</span><br><span class="line">&#123;</span><br><span class="line">    string Name &#123; get; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;运行图？？交路？？</p>
+<h3 id="客运需求模型"><a href="#客运需求模型" class="headerlink" title="客运需求模型"></a>客运需求模型</h3><p>&emsp;&emsp;？？？</p>
+<h2 id="问题-求解器模型"><a href="#问题-求解器模型" class="headerlink" title="问题-求解器模型"></a>问题-求解器模型</h2><p>&emsp;&emsp;上面的建模解决的是问题的输入—输出的表达一致性问题。但是这并不是问题的全部，在DDD模式中，我们需要找到适合的聚合根 (Aggregated Root) 完成对数据的读取/存储。问题环境 (Problem Data Context) 就是这样的一个聚合根。它包含一个问题的所有输入，以运行图编制问题为例，Data Context包含以下内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public interface ITTPDataContext // TTP问题环境</span><br><span class="line">&#123;</span><br><span class="line">    IRailwayNetwork Net &#123; get; set; &#125; // 物理网络</span><br><span class="line">    ILineLlan LinePlan &#123; get; set; &#125; // 开行方案</span><br><span class="line">    double ArrArrHeadway(IRailwayStation sta); // 到-到间隔</span><br><span class="line">    double DepDepHeadway(IRailwayStation sta); // 发-发间隔</span><br><span class="line">    double LowerBoundDwellingTimeInStation(ILine l, IRailwayStation sta); // 最小停站时间</span><br><span class="line">    double UpperBoundDwellingTimeInStation(ILine l, IRailwayStation sta); // 最大停站时间</span><br><span class="line">    double LowerBoundRunningTimeInSection(ILine l, IRailwaySection sec); // 最小区间运行时间</span><br><span class="line">    double UpperBoundRunningTimeInSection(ILine l, IRailwaySection sec); // 最大区间运行时间</span><br><span class="line">    double LowerBoundStartTime(ILine l); // 最早发车时间</span><br><span class="line">    double UpperBoundStartTime(ILine l); // 最晚发车时间</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;另一方面，问题的求解也需要封装起来便于调用。对于一类问题环境，我们可以设计一个求解器，典型的问题求解器如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class TTPSolver</span><br><span class="line">&#123;</span><br><span class="line">    public virtual ITTPDataContext DataContext &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">    public ITimeTable Solve()</span><br><span class="line">    &#123;</span><br><span class="line">        // Solution Method Code</span><br><span class="line">        // ...</span><br><span class="line">        // ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;应用层主要可以通过以下步骤来求解问题：</p>
+<ol>
+<li><p>从Repository 生成 Data Context</p>
+</li>
+<li><p>调用 Solver 求解问题。</p>
+<p>简单的代码示例如下：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public OperationResponse GenTimeTable(string wsName)</span><br><span class="line">&#123;</span><br><span class="line">    //Some codes...</span><br><span class="line">    RailwayNetwork net = NetRepos.Network;  //NetRepos是路网的Repostory</span><br><span class="line">    LinePlan p = TTPRepos.GenLinePlan(wsName, net); //TTPRepos是运行图编制问题输入的Repostory</span><br><span class="line">    ITTPDataContext ctx = TTPRepos.GenCtx(wsName);</span><br><span class="line">    TTPSolver solver = new TTPSolver</span><br><span class="line">    &#123;</span><br><span class="line">        Net = net,</span><br><span class="line">        LinePlan = p,</span><br><span class="line">        DataContext = ctx,</span><br><span class="line">        TTBuilder = new TimetableBuilder()</span><br><span class="line">    &#125;;</span><br><span class="line">    solver.Solve();</span><br><span class="line">    //Some codes...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&emsp;&emsp;本文主要介绍了DDD模式下设计高速铁路客运服务网的一些细节。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/团队workshop/" rel="tag"># 团队workshop</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/Geek-things/" rel="next" title="生产力软件一览">
+                <i class="fa fa-chevron-left"></i> 生产力软件一览
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/DrawingWithLaTexAndInkscape/" rel="prev" title="通过 LaTeX 和 Inkscape 绘制论文插图">
+                通过 LaTeX 和 Inkscape 绘制论文插图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+     
+       <div id="gitment-container"></div>
+     
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+		  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Wuyang">
+          <p class="site-author-name" itemprop="name">Wuyang</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wyyuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/WuyangYuan" target="_blank" title="Coding.net">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Coding.net
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.researchgate.net/profile/Wuyang_Yuan" target="_blank" title="Researchgate">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Researchgate
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3439577364&website=www.oicqzone.com" target="_blank" title="TIM">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                    
+                      TIM
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Domain-Driven-Design-DDD-领域模型驱动设计"><span class="nav-text">Domain-Driven Design (DDD) 领域模型驱动设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高速铁路客运服务网模型"><span class="nav-text">高速铁路客运服务网模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础路网"><span class="nav-text">基础路网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运输计划模型"><span class="nav-text">运输计划模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客运需求模型"><span class="nav-text">客运需求模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题-求解器模型"><span class="nav-text">问题-求解器模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wuyang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+     
+     
+     
+     
+     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+     
+         <script type="text/javascript">
+             const gitment = new Gitment({
+                id: window.location.pathname,
+                owner: 'wyyuan',
+                repo: 'wyyuan.github.io',
+                oauth: {
+                    client_id: '3e3b7c8977ce377ee866',
+                    client_secret: '139678b66b6990b8c94df15a65b87a010b8aedcd',
+                }});
+             gitment.render('gitment-container');
+         </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+     
+ 
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
