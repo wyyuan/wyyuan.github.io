@@ -105,7 +105,7 @@ $$
 
 * $x^k$是第$k$次迭代中任意一个解。
 
-在使用这个方法的时候，步长$\theta_{k}$的选择较为重要。如果步长太小，算法会卡在一个地方不无法收敛；如果太大，则会漏掉最优解并且可能在两个或多个非优解之间来回。所以通过设置$\theta_k $和 $\sum_{j=1}^{k} \theta_{j} \rightarrow \infty$ 使得算法在这两种极端情况中取一个平衡点。
+在使用这个方法的时候，步长$\theta_{k}$的选择较为重要。如果步长太小，算法会卡在一个地方不无法收敛；如果太大，则会漏掉最优解并且可能在两个或多个非优解之间来回。所以通过设置$\theta_k\rightarrow0$和 $\sum_{j=1}^{k} \theta_{j} \rightarrow \infty$ 使得算法在这两种极端情况中取一个平衡点。
 
 ### 牛顿法(Newton's method)
 
@@ -130,5 +130,5 @@ $$
    {{\xi ^i} \geqslant 0,\quad i = 0, \ldots ,k - 1}  \\
 $$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxOTA5NDk5OF19
+eyJoaXN0b3J5IjpbLTIxNDUwODIyNzldfQ==
 -->
